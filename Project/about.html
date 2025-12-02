@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ELITE ACADEMY - Gallery</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="gallery-specific.css"> </head>
+<body>
+  <div class="container">
+    <header>
+      <nav>
+        <div class="brand">
+          <div class="logo">EA</div>
+          <div>
+            <div style="font-weight:800;">ELITE ACADEMY</div>
+            <div class="header-small">Excellence • Innovation • Growth</div>
+          </div>
+        </div>
+        <div class="nav-links" id="navLinks">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="course.html">Course</a>
+          <a href="gallery.html" class="active-link">Gallery</a>
+          <a href="contact.html">Contact</a>
+          <a class="btn" href="#enroll">Enroll</a>
+        </div>
+        <span class="icon" onclick="toggleMenu()">&#9776;</span>
+      </nav>
+    </header>
+
+    <main>
+      <section class="gallery-header">
+        <h1>Student Showcase</h1>
+        <p>Witness the intellectual, emotional, and physical growth of our students.</p>
+        
+        <div class="filter-container">
+            <button class="filter-btn active" onclick="filterGallery('all')">All Moments</button>
+            <button class="filter-btn" onclick="filterGallery('stem')">STEM & Robotics</button>
+            <button class="filter-btn" onclick="filterGallery('arts')">Arts & Culture</button>
+            <button class="filter-btn" onclick="filterGallery('sports')">Athletics</button>
+        </div>
+      </section>
+
+      <section class="gallery-grid" id="gallery-grid">
+         </section>
+    </main>
+
+    <footer class="footer">
+      <div>
+        <div style="font-weight:800;">ELITE ACADEMY</div>
+        <div style="color:var(--muted)">To provide holistic education that nurtures intellectual, emotional, and physical growth.</div>
+      </div>
+      <div style="text-align:right;">
+        <div class="badge">Open Mon–Fri 8am–4pm</div>
+        <div style="margin-top:8px;" class="socials">
+          <span>📞 +233 504811951</span>
+          <span style="margin-left:8px;">📧 eliteacademy23@gmail.com</span>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <div id="imageModal" class="modal">
+    <span class="close">&times;</span>
+    <div class="modal-content">
+        <img id="modalImg" src="" alt="">
+        <div class="modal-caption">
+            <h3 id="modalTitle">Title</h3>
+            <p id="modalDesc">Description</p>
+        </div>
+    </div>
+  </div>
+
+<script src="about script.js"></script>
+</body>
+</html>

@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduHub - Contact</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"> 
+    
+    <style>
+        /* General Styling & Educational Theme */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7f6; /* Light academic background */
+            color: #333;
+        }
+
+        header {
+            background-color: #004d40; /* Deep Teal/Green for Education */
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+
+        /* Navigation */
+        .topnav {
+            overflow: hidden;
+            background-color: #333;
+            display: flex;
+            justify-content: center;
+        }
+
+        .topnav a {
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+            transition: background-color 0.3s;
+        }
+
+        .topnav a:hover {
+            background-color: #00695c;
+            color: white;
+        }
+
+        .topnav a.active {
+            background-color: #00897b; /* Bright Teal for active link */
+            color: white;
+        }
+
+        .topnav .icon {
+            display: none;
+        }
+
+        /* Main Layout: Contact Grid */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr; /* Form takes 2/3, Info takes 1/3 */
+            gap: 40px;
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        /* Contact Form Section */
+        .contact-form, .contact-info {
+            padding: 30px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        .contact-form h2 {
+            color: #004d40;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 10px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box; 
+            margin-top: 6px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+
+        input:focus, textarea:focus, select:focus {
+            border-color: #00897b;
+            outline: none;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        .submit-btn {
+            background-color: #00897b;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .submit-btn:hover {
+            background-color: #00695c;
+        }
+
+        .status-message {
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        /* Contact Info Sidebar */
+        .contact-info h3 {
+            color: #004d40;
+            margin-top: 0;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .info-card {
+            margin-bottom: 30px;
+        }
+
+        .address-details i {
+            color: #00897b;
+            margin-right: 10px;
+            width: 15px;
+        }
+
+        .address-details {
+            line-height: 2.2;
+        }
+
+        /* Map Styling */
+        .map-container {
+            margin-bottom: 30px;
+        }
+
+        .map-caption {
+            font-style: italic;
+            color: #777;
+            margin-bottom: 10px;
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 300px;
+            border-radius: 8px;
+            border: 3px solid #ddd;
+        }
+
+        /* Social Links */
+        .social-links a {
+            font-size: 24px;
+            margin-right: 15px;
+            color: #004d40;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: #00897b;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 20px;
+        }
+
+
+        /* Responsiveness (Mobile Menu and Grid Collapse) */
+        @media screen and (max-width: 900px) {
+            .contact-grid {
+                grid-template-columns: 1fr; /* Collapse to single column */
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            .topnav a:not(:first-child) {display: none;}
+            .topnav a.icon {
+                float: right;
+                display: block;
+            }
+            .topnav {
+                justify-content: flex-start;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            .topnav.responsive {position: relative;}
+            .topnav.responsive .icon {
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+            .topnav.responsive a {
+                float: none;
+                display: block;
+                text-align: left;
+            }
+            .topnav.responsive {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>EduHub: Contact Us</h1>
+    </header>
+    
+    <nav>
+        <div class="topnav" id="myTopnav">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="courses.html">Courses</a>
+            <a href="faculty.html">Faculty</a>
+            <a href="contact.html" class="active">Contact</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+    </nav>
+    
+    <main class="contact-grid">
+        
+        <section class="contact-form">
+            <h2>Send Us a Message</h2>
+            <p>Whether you have a question about courses, enrollment, or career opportunities, our team is ready to help.</p>
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="name">Full Name *</label>
+                    <input type="text" id="name" name="name" placeholder="John Doe" required>
+                </div>
+                <div class="form-group">
+                    <label for="topic">Inquiry Topic</label>
+                    <select id="topic" name="topic">
+                        <option value="enrollment">Enrollment & Admissions</option>
+                        <option value="courses">Course Content & Curriculum</option>
+                        <option value="technical">Technical Support</option>
+                        <option value="general">General Inquiry</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" placeholder="you@example.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message *</label>
+                    <textarea id="message" name="message" rows="6" placeholder="Your detailed message..."></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send Message <i class="fas fa-paper-plane"></i></button>
+                <p id="formStatus" class="status-message"></p>
+            </form>
+        </section>
+        
+        <aside class="contact-info">
+            
+            <div class="info-card">
+                <h3>Campus Location 📍</h3>
+                <p>Visit us during office hours (Mon-Fri, 8:00 AM - 4:00 PM).</p>
+                <div class="address-details">
+                    <i class="fas fa-map-marker-alt"></i> 123 Learning St, Education City
+                    <br>
+                    <i class="fas fa-phone"></i> +233 54 030 3513
+                    <br>
+                    <i class="fas fa-envelope"></i> info@eduhub.com
+                </div>
+            </div>
+
+            <div class="map-container">
+                <p class="map-caption">Find our central campus below:</p>
+                
+                <iframe 
+                    src="http://googleusercontent.com/maps.google.com/2" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+
+            <div class="social-links">
+                <h3>Follow Our Journey</h3>
+                <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+            </div>
+
+        </aside>
+    </main>
+    
+    <footer>
+        <p>&copy; <time datetime="2025">2025</time> EduHub. All rights reserved.</p>
+    </footer>
+    
+    <script>
+        // 1. Responsive Navigation Menu Toggle
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+
+        // 2. Realistic Form Submission Simulation
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('contactForm');
+            const statusMessage = document.getElementById('formStatus');
+
+            form.addEventListener('submit', function(event) {
+                event.preventDefault(); // Stop the default form submission
+
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+                const message = document.getElementById('message').value;
+
+                // Basic validation check
+                if (!name || !email || !message) {
+                    statusMessage.textContent = "Error: Please fill in all required fields (*).";
+                    statusMessage.style.color = 'red';
+                    return;
+                }
+
+                // Simulate sending data (2-second delay for realism)
+                statusMessage.textContent = "Sending message, please wait...";
+                statusMessage.style.color = '#004d40';
+                
+                setTimeout(() => {
+                    // Successful simulation
+                    statusMessage.textContent = `Thank you, ${name}! Your message has been received by EduHub and we will respond to ${email} shortly.`;
+                    statusMessage.style.color = 'green';
+                    form.reset(); // Clear the form
+                }, 2000); 
+            });
+        });
+    </script>
+</body>
+</html>

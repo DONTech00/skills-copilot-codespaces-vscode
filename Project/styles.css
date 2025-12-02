@@ -1,0 +1,161 @@
+:root {
+  --primary: #001f3f; /* Navy blue */
+  --muted: #6c757d;
+  --accent: #ffd700; /* Gold for buttons */
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--primary);
+  color: white;
+  padding: 10px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 15px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+}
+
+.btn {
+  background-color: var(--accent);
+  color: var(--primary);
+  padding: 8px 16px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.btn-outline {
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  padding: 8px 16px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.hero {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.hero-card {
+  flex: 2;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.programs table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.programs th, .programs td {
+  border: 1px solid var(--muted);
+  padding: 10px;
+}
+
+.programs th {
+  background: var(--primary);
+  color: white;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.input {
+  padding: 10px;
+  border: 1px solid var(--muted);
+  border-radius: 5px;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  background: var(--primary);
+  color: white;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+.badge {
+  background: var(--accent);
+  padding: 5px 10px;
+  border-radius: 20px;
+}
+
+.socials {
+  display: flex;
+  gap: 10px;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: var(--primary);
+  }
+
+  .nav-links.responsive {
+    display: flex;
+  }
+
+  .icon {
+    display: block;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+  .hero {
+    flex-direction: column;
+  }
+}
